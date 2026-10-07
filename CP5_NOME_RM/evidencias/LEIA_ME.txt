@@ -1,0 +1,52 @@
+CP5 - PASTA DE EVIDENCIAS
+=========================
+
+As evidencias E01 a E06 SAO OBRIGATORIAS (D01, secao 10) e devem ser
+produzidas a partir de EXECUCOES REAIS da aplicacao e de consultas
+diretas nos bancos. NAO FABRIQUE EVIDENCIAS: E02-E05 so existem apos
+testes reais no SQL Server e no Oracle.
+
+E01 - Estrutura da solucao
+    Captura da tela (Explorer/VS Code) mostrando o projeto C#,
+    a pasta scripts/ e a organizacao geral da entrega.
+
+E02 - SQL Server / COMMIT
+    Execucao de sucesso no SQL Server: saldos antes (1000,00 / 500,00)
+    e depois (800,00 / 700,00), total preservado e o novo registro
+    em TRANSFERENCIA. Pode combinar a saida do console com a consulta
+    no SSMS (ou o script S03).
+
+E03 - SQL Server / ROLLBACK
+    Falha deliberada (Simular erro = S) e comprovacao de que CC-1001
+    voltou a 1.000,00, CC-1002 permaneceu em 500,00 e NENHUM registro
+    parcial ficou em TRANSFERENCIA.
+
+E04 - Oracle / COMMIT
+    Idem E02, no Oracle.
+
+E05 - Oracle / ROLLBACK
+    Idem E03, no Oracle. No DBeaver/Valentina, mantenha o
+    Auto-commit DESATIVADO durante o teste manual de ROLLBACK.
+
+E06 - Codigo da transacao
+    Captura do arquivo CP5.Transacoes/Servicos/TransferenciaService.cs
+    mostrando: inicio da transacao, debito, erro deliberado, credito,
+    INSERT em TRANSFERENCIA, COMMIT, ROLLBACK e tratamento de excecao.
+
+Convencao de nomes sugerida (D01; nomes exatos nao sao obrigatorios - D02):
+    01_estrutura.png
+    02_sqlserver_commit.png
+    03_sqlserver_rollback.png
+    04_oracle_commit.png
+    05_oracle_rollback.png
+    06_codigo_transacao.png
+
+Dica de roteiro (D03, secao 10):
+    1. Conecte-se a base/schema do CP5 (nunca ao master nem a SYSTEM).
+    2. Confira os dados iniciais das contas.
+    3. Execute o caso de sucesso e confira saldos e o registro criado.
+    4. Reinicialize os dados (S01/S02 ou bloco de reset de S03/S04).
+    5. Execute o caso com erro simulado.
+    6. Confirme que os saldos voltaram ao inicial e que nenhum
+       registro parcial de TRANSFERENCIA permaneceu.
+    7. Capture as evidencias em resolucao legivel.

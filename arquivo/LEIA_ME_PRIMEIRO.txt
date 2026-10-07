@@ -1,0 +1,56 @@
+CP5 — C# SOFTWARE DEVELOPMENT — 3ESPH-2026
+KIT ALUNO — V01
+============================================
+
+ORDEM RECOMENDADA DE LEITURA
+----------------------------
+1. CP5_D01.docx — enunciado oficial e requisitos da atividade.
+2. CP5_D02.docx — rubrica detalhada de avaliação.
+3. CP5_D03.docx — tutorial técnico de apoio.
+4. CP5_D04_SCRIPTS/ — scripts SQL Server e Oracle.
+5. CP5_D06.docx + README_MODELO.md — modelo de README.
+6. CP5_D07.docx — modelo OPCIONAL para organizar as evidências.
+7. CP5_D08.docx — checklist pré-entrega.
+8. CP5_Apresentacao.pptx — apresentação-resumo.
+
+REQUISITO CENTRAL
+-----------------
+A transferência deve ser uma única unidade transacional contendo:
+- débito da conta de origem;
+- crédito da conta de destino;
+- registro da operação na tabela TRANSFERENCIA.
+
+No sucesso: COMMIT.
+Na falha deliberada: ROLLBACK, sem saldo parcial e sem histórico parcial.
+
+AMBIENTE DE REFERÊNCIA
+----------------------
+- Aplicação C#: .NET 9 recomendado.
+- SQL Server e Oracle são obrigatórios, usados separadamente.
+- ADO.NET foi a referência usada em aula.
+- EF Core ou tecnologia equivalente também são permitidos.
+
+ORACLE
+------
+O script S00_Oracle_XE_Local_Preparar_Usuario_CP5.sql é OPCIONAL e somente
+para Oracle XE local quando houver acesso administrativo.
+
+Em ambiente institucional, use as credenciais/permissões fornecidas e não
+execute o S00 como SYSTEM sem autorização.
+
+Para teste MANUAL de ROLLBACK no DBeaver/Valentina, o Auto-commit deve estar
+desativado.
+
+EVIDÊNCIAS
+----------
+As seis evidências definidas no D01 são obrigatórias.
+O D07 é apenas um modelo opcional de organização e não substitui os arquivos
+de evidência.
+
+ENTREGA
+-------
+Arquivo: CP5_NOME_RM.zip
+Um integrante realiza o upload; todos os integrantes e RMs devem constar no
+README.
+
+Não entregar senha institucional real, bin/, obj/ ou .vs/ desnecessários.

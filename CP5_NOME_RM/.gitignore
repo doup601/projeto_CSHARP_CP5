@@ -1,0 +1,15 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# User secrets / local config with real credentials
+secrets.json
+
+# OS files
+.DS_Store
+Thumbs.db
